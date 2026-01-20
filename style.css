@@ -49,10 +49,12 @@ body {
 #logo {
   bottom: 0;
   color: var(--background-color);
-  height: 4rem;
   margin: 2rem;
+  max-width: 7rem;
+  min-width: 4.5rem;
   position: sticky;
   top: 3rem;
+  width: 8dvw;
   z-index: 1;
 }
 
