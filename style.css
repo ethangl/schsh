@@ -84,7 +84,7 @@ main {
   flex: 1;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 @media screen and (min-width: 888px) {
@@ -103,7 +103,7 @@ main {
 .cell p {
   font-size: 14px;
   margin: 0;
-  line-height: 1.333;
+  line-height: 1.444;
 }
 
 .cell p + p {
