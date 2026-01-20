@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="manage.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Manage Gallery</h1>
+      <div id="user-info">
+        <span id="user-email"></span>
+        <button id="logout-btn" hidden>Logout</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Login Section -->
+      <section id="login-section">
+        <button id="google-login-btn" class="btn btn-primary">
+          Sign in with Google
+        </button>
+      </section>
+
+      <!-- Management Section (shown after auth) -->
+      <section id="manage-section" hidden>
+        <!-- Upload Form -->
+        <div class="upload-area">
+          <h2>Upload Images</h2>
+          <input type="file" id="file-input" accept="image/*" multiple />
+          <button id="upload-btn" class="btn btn-primary">Upload</button>
+          <p id="upload-status"></p>
+        </div>
+
+        <!-- Image List -->
+        <div class="image-list">
+          <h2>Your Images</h2>
+          <div id="images"></div>
+          <p id="no-images" class="empty-state" hidden>
+            No images uploaded yet.
+          </p>
+        </div>
+      </section>
+
+      <!-- Access Denied -->
+      <section id="denied-section" hidden>
+        <p class="error">Access denied. Your email is not on the allowlist.</p>
+        <button id="denied-logout-btn" class="btn">Logout</button>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/manage.js"></script>
+  </body>
+</html>
