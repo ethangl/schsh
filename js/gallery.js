@@ -13,6 +13,11 @@ async function loadRandomImage() {
     return;
   }
 
+  if (!images || images.length === 0) {
+    container.innerHTML = "<p>No images available.</p>";
+    return;
+  }
+
   const randomImage = images[Math.floor(Math.random() * images.length)];
   const url = db.storage.from("images").getPublicUrl(randomImage.storage_path)
     .data.publicUrl;

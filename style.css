@@ -26,6 +26,10 @@ body {
   padding: 0 1rem;
 }
 
+#header {
+  background-color: var(--foreground-color);
+}
+
 .bar {
   background-color: var(--background-color);
   bottom: 0;
@@ -103,17 +107,13 @@ main {
 }
 
 .cell p {
-  font-size: 14px;
+  font-size: 17px;
   margin: 0;
   line-height: 1.444;
 }
 
 .cell p + p {
   margin-top: 1rem;
-}
-
-.cell.large p {
-  font-size: 19px;
 }
 
 .cell a {
